@@ -6,8 +6,8 @@ var argv = require('optimist')
 var http = require('http');
 var express = require('express')
 var db = require('./lib/db')
-var post = require('./lib/posts')(db)
-var user = require('./lib/user')(db)
+var post = require('./lib/post')(db)
+var user = require('./lib/user')(db,require('./config'))
 
 var app = express()
 
